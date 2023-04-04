@@ -1,10 +1,9 @@
 function isPalindrome(text) {
     if (text.length < 2) {
         return true;
-    } if (text[0] !== text.length[-1]) {
+    } if (text[0] !== text[text.length - 1]) {
         return false;
     }
-    return isPalindrome(text.substr(1, text.substr-2));
+    return isPalindrome(text.slice(1, -1));
 }
 
-console.log(isPalindrome('bob'));
